@@ -197,6 +197,7 @@ if (typeof JSPREF !== "object" || JSPREF === null) {
 var Rank = {
     Guest: 0,
     Member: 1,
+    Trusted: 1.3,
     Leader: 1.5,
     Moderator: 2,
     Admin: 3,

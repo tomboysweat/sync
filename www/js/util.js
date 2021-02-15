@@ -1987,6 +1987,7 @@ function genPermissionsEditor() {
         ["Anonymous"    , "-1"],
         ["Guest"        , "0"],
         ["Registered"   , "1"],
+        ["Trusted"      , "1.3"],
         ["Leader"       , "1.5"],
         ["Moderator"    , "2"],
         ["Channel Admin", "3"],
@@ -1996,6 +1997,7 @@ function genPermissionsEditor() {
     var noanon = [
         ["Guest"        , "0"],
         ["Registered"   , "1"],
+        ["Trusted"      , "1.3"],
         ["Leader"       , "1.5"],
         ["Moderator"    , "2"],
         ["Channel Admin", "3"],
@@ -2004,6 +2006,13 @@ function genPermissionsEditor() {
 
     var modleader = [
         ["Leader"       , "1.5"],
+        ["Moderator"    , "2"],
+        ["Channel Admin", "3"],
+        ["Nobody"       , "1000000"]
+    ];
+
+    var trustedplus = [
+        ["Trusted"      , "1.3"],
         ["Moderator"    , "2"],
         ["Channel Admin", "3"],
         ["Nobody"       , "1000000"]
@@ -2059,7 +2068,7 @@ function genPermissionsEditor() {
     makeOption("Edit MOTD", "motdedit", modplus, CHANNEL.perms.motdedit+"");
     makeOption("Edit chat filters", "filteredit", modplus, CHANNEL.perms.filteredit+"");
     makeOption("Import chat filters", "filterimport", modplus, CHANNEL.perms.filterimport+"");
-    makeOption("Edit chat emotes", "emoteedit", modplus, CHANNEL.perms.emoteedit+"");
+    makeOption("Edit chat emotes", "emoteedit", trustedplus, CHANNEL.perms.emoteedit+"");
     makeOption("Import chat emotes", "emoteimport", modplus, CHANNEL.perms.emoteimport+"");
 
     addDivider("Misc");
@@ -2370,6 +2379,7 @@ function formatCSModList() {
 
         var ranks = [
             { name: "Remove Moderator", rank: 1 },
+            { name: "Trusted", rank: 1.3 },
             { name: "Moderator", rank: 2 },
             { name: "Admin", rank: 3 },
             { name: "Owner", rank: 4 },

@@ -596,6 +596,7 @@ function chanrankSubmit(rank) {
         rank: rank
     });
 }
+$("#cs-chanranks-trusted").click(chanrankSubmit.bind(this, 1.3));
 $("#cs-chanranks-mod").click(chanrankSubmit.bind(this, 2));
 $("#cs-chanranks-adm").click(chanrankSubmit.bind(this, 3));
 $("#cs-chanranks-owner").click(chanrankSubmit.bind(this, 4));

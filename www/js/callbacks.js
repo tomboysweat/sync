@@ -452,6 +452,7 @@ Callbacks = {
 
             addRank(0, "<span class='userlist_guest'>Guest</span>");
             addRank(1, "<span>Registered</span>");
+            addRank(1.3, "<span class='userlist_trusted'>Trusted</span>");
             addRank(2, "<span class='userlist_op'>Moderator</span>");
             addRank(3, "<span class='userlist_owner'>Admin</span>");
             addRank(255, "<span class='userlist_siteadmin'>Superadmin</span>");

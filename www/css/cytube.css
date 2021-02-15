@@ -286,6 +286,10 @@ li.ui-sortable-helper, li.ui-sortable-placeholder + li.queue_entry {
     color: #00aa00!important;
 }
 
+.userlist_trusted {
+    color: #888888!important;
+}
+
 .userlist_guest {
     color: #888888!important;
 }
